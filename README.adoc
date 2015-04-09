@@ -57,6 +57,11 @@ configured to upload documents into the system.
 * Fast meta-data and textual document searching
 * Storage of documents on different storage devices (Local Storage/Network Storage/S3)
 
+== More Documentation
+
+* link:docs/documents.adoc[Documents]
+* link:docs/security.adoc[Security]
+
 == How
 Written in Java Monument benefits by leveraging many open source libraries to perform 
 its functions. Some of the libraries that it uses are:
