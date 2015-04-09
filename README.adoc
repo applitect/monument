@@ -45,7 +45,7 @@ configured to upload documents into the system.
 ** File validation (size and type)
 ** Image resizing and resampling
 ** Auto meta-data from EXIF attributes
-** Configurable allowed document types
+** Configurable allowed image types
 ** Duplicate document identification
 * Document retention policies
 ** Configurable per document, group, class, etc. 
@@ -53,7 +53,7 @@ configured to upload documents into the system.
 * Document encryption
 * Document versioning
 * Document auditing
-* Meta-data structuring and validation
+* Meta-data structuring, security and validation
 * Fast meta-data and textual document searching
 * Storage of documents on different storage devices (Local Storage/Network Storage/S3)
 
