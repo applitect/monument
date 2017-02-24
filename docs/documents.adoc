@@ -33,7 +33,7 @@ This is a unique key assigned by the system that is returned when a pyx is
 added. This allows for other systems to integrate easily where only a single
 value needs to be stored identifying a document. Think of it as the primary key.
 
-Imported Date::
+Import Date::
 The date/timestamp the document is originally added to monument.
 
 === Optional Predefined Relics
@@ -61,28 +61,32 @@ define itself. Monument allows for validation to be defined on each relic
 value provided.
 
 
-== Example Document Defined
+== Example Pyx Defined
 *Version 2*
 
 '''
 *Filename:* my_fancy_img.png +
-*Document Category:* Human Resources +
-*Document Type:* Acceptance Letter +
+*Classification:* Human Resources +
+*UIK:* 123456 +
+*Import Date:* Apr 10, 2012 +
+*Type:* Acceptance Letter +
 *Employee Name:* David Thompson +
 *Document Date:* Apr 1, 2012 +
-*Comment 1 (Alice Cooper):* Hand delivered for scanning +
-*Comment 2 (Ace Frehley):* David requested a copy of his letter be printed +
+*Comment:* Hand delivered for scanning +
+David requested a copy of his letter be printed +
 *Searchable Text:* --Redacted at the request of the employee--
 
 *Version 1*
 
 '''
 *Filename:* my_fancy_img.png +
-*Document Category:* Human Resources +
-*Document Type:* Acceptance Letter +
+*Classification:* Human Resources +
+*UIK:* 123456 +
+*Import Date:* Apr 10, 2012 +
+*Type:* Acceptance Letter +
 *Employee Name:* David Thompsn +
 *Document Date:* Apr 1, 2012 +
-*Comment 1 (Alice Cooper):* Hand delivered for scanning +
-*Comment 2 (Ace Frehley):* David requested a copy of his letter be printed +
+*Comment:* Hand delivered for scanning +
+David requested a copy of his letter be printed +
 *Searchable Text:* Dear David We are pleased to offer you the job as IT janitor and
 are offering you the substantial salary of $12000 per year
