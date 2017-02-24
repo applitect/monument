@@ -1,52 +1,65 @@
-= Document
+= Pyx (A completely encompassing document)
 
-== What composes a document
-A document is a composition of different types of data. In its very minimallistic form,
-it would be a simple image. However, an image by itself is not usable in a document
-storage solution. The document must be identified by a certain amount of information
-to actually be usable. After years of working with different document storage systems,
-Monument has been designed to require some meta-data.
+== Why Pyx
+The standard definition of a pyx is a container to store consecrated host to the
+sick. We needed a term was similar to image or document but fit more the theme
+of storing a collection of relics. With the play on words, Pyx seems to fit the
+bill fantastically.
 
-== Filename
-A lot of times a filename is not useful. But in other instance some file name 
+== What composes a pyx
+A pyx is a collection of relics, a relic is just a single data element, so in
+essence a pyx is a collection of data elements. In its very minimalistic form,
+a pyx could be a collection of one relic with the image's binary information
+within it. However, the binary image information by itself is not practical.
+To actually be usable, the document must contain information to help identify what
+the image contains. There are small set of preconfigured relic types that are
+included within each pyx.
+
+=== Required Predefined Relics
+
+Filename::
+A lot of times a filename is not useful. But in other instance some file name
 naming conventions provide useful information for locating a document.
 
-== Document Category
-This is the highest level categorization of documents. It is text data that should
-define the category of documents. This will be required by each document and must
-be configured in the system. This is also one of the primary fields used for 
-security constraints to accessing documents. Document retention policies can be
-defined at this level.
+Classification::
+This is the highest level grouping of pyxes. It is textual data that should
+define the category of a pyx. This will be required by each document and any
+document without one will be assigned to "nonclassified". This is also one of
+the primary relics used for defining security constraints. Retention policies
+can be defined at this level.
 
-== Document Type
-Within each category individual document types can be defined. This is a required
-text field and must be configured within the system. This field can also be used
-for security constraints for accessing documents. Document retention policies can
-be defined at this level and will override the category retention policy.
+Unique Identifiable Key (UIK)::
+This is a unique key assigned by the system that is returned when a pyx is
+added. This allows for other systems to integrate easily where only a single
+value needs to be stored identifying a document. Think of it as the primary key.
 
-== Defined Fields
-Each document type within a category can define the meta-data fields that can
-exist and are required to define a document. Monument allows for data validation
-to be defined on each field element.
+Imported Date::
+The date/timestamp the document is originally added to monument.
 
-== Comments
-Often times, it is helpful for general text comments be associated with a document.
-Monument allows for comments to be added to a document by users with appropriate
-permissions. Comments can be added, searched, modified, and deleted with correct 
-permissions.
+=== Optional Predefined Relics
+There are also a set of predefined relics that are optionally added to a pyx
+based on system configuration.
 
-== Searchable Text
-All documents can have the text of the document added in the searchable text data
-section. Monument can be setup to automatically add this data from different 
-acceptable formats, such as scanning PDFs for text, OCR capturing of the data
-from images, etc. This is configurable by category and type.
+EXIF Data::
+The data stored within the EXIF headers of many image formats. This can contain
+location and date information.
 
-== Unique Identifiable Key (UIK)
-This is a unique key assigned by the system that is returned when a document is added. This allows for other systems to integrate easily where only a single value needs to be stored identifying a document. Think of it as the primary key.
+Security Checksum::
+Data storing the stored image checksum for security purposes.
 
-== Versions
+Text::
+The textual representation of the document. Can be added via a document
+recognition process.
+
+Version::
 Documents can be set up to be versioned. Keeping an entire audit history of any
 changes that have happened to the document over time.
+
+== User Defined Relics
+Each pyx can define the relic fields that can exist and are required to
+define itself. Monument allows for validation to be defined on each relic
+value provided.
+
 
 == Example Document Defined
 *Version 2*
@@ -71,6 +84,5 @@ changes that have happened to the document over time.
 *Document Date:* Apr 1, 2012 +
 *Comment 1 (Alice Cooper):* Hand delivered for scanning +
 *Comment 2 (Ace Frehley):* David requested a copy of his letter be printed +
-*Searchable Text:* Dear David We are pleased to offer you the job as IT janitor and 
+*Searchable Text:* Dear David We are pleased to offer you the job as IT janitor and
 are offering you the substantial salary of $12000 per year
- 

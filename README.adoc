@@ -4,25 +4,25 @@ Electronic document storage provider
 == Description
 After years of building the same thing over and over again to model a database to
 store documents with their meta-data or purchasing extremely expensive solutions
-such as Documentum, ImageNow, or Filenet, we have yet to see an easy to use 
-web-service solution to store and retrieve documents. There are other 
+such as Documentum, ImageNow, or Filenet, we have yet to see an easy to use
+web-service solution to store and retrieve documents. There are other
 alternatives in the CMS space such as the open-source system Alfresco, but their
-document storage solution is more of a add-on and not as configurable at the 
+document storage solution is more of a add-on and not as configurable at the
 meta-data layer as we needed. We thought it would be nice if you had a system
 that could be started up with a little configuration and all of a sudden we have
-applications that can store/retrieve documents with meta-data that can be 
+applications that can store/retrieve documents with meta-data that can be
 searched on, modified, validated and secured.
 
-There are many systems out there that integrate with other products such as 
+There are many systems out there that integrate with other products such as
 SharePoint, but many of them being closed source solutions lack the extensibility
 we want. Any time you start looking for a solution and you can't find a price
-on their website, you know the price is going to be cost prohibitive for 
-smaller companies or start-ups. 
+on their website, you know the price is going to be cost prohibitive for
+smaller companies or start-ups.
 
 == What Monument is Not
 Monument is not trying to be a full blown CMS. There are better products for
 providing this functionality, such as Alfresco. Instead Monument is really just
-trying to provide a way for documents to be stored, organized, searched, and 
+trying to provide a way for documents to be stored, organized, searched, and
 retrieved. If some type of document workflow needs to be built around the
 documents, this can be provided outside the system by the developers custom
 code.
@@ -32,23 +32,23 @@ written to interact with the web-service calls. A web client for managing
 some of the system setup will exist.
 
 Monument will not provide scanning capabilities that can be easily
-provided by other off-the-shelf systems such as Kofax. However, Kofax could be 
+provided by other off-the-shelf systems such as Kofax. However, Kofax could be
 configured to upload documents into the system.
 
 == What it provides
 * REST based web-service
-* Document storage with meta-data. 
+* Document storage with meta-data.
 * Document level security
 ** Authentication provided by pluggable authentication modules
 ** Authorization configured via document authorization model
 * Document importing and validation
 ** File validation (size and type)
 ** Image resizing and resampling
-** Auto meta-data from EXIF attributes
+** Auto extract of data from images such as EXIF attributes
 ** Configurable allowed image types
 ** Duplicate document identification
 * Document retention policies
-** Configurable per document, group, class, etc. 
+** Configurable per document or class
 ** Staged deletion
 * Document encryption
 * Document versioning
@@ -57,16 +57,27 @@ configured to upload documents into the system.
 * Fast meta-data and textual document searching
 * Storage of documents on different storage devices (Local Storage/Network Storage/S3)
 
+== Terminology
+Given that imaging systems are typically used to store information for long
+periods of time, we are following a convention of naming our data types based
+on historical nouns. This gives clear separation of monument from other imaging
+systems and provides a clear and concise set of terms that can be used when
+discussing features. A clear difference can be immediately seen just by
+understanding that in monument a collection of meta-data with an image is named
+a Pyx versus a Document in most other systems. Please refer to the terminology
+document for more terms.
+
 == More Documentation
 
+* link:docs/terminology.adoc[Terminology]
 * link:docs/documents.adoc[Documents]
 * link:docs/security.adoc[Security]
 
 == How
-Written in Java Monument benefits by leveraging many open source libraries to perform 
+Written in Java Monument benefits by leveraging many open source libraries to perform
 its functions. Some of the libraries that it uses are:
 
-* Apache Commons Imaging 
+* Apache Commons Imaging
 ** Helping with EXIF data and some image imports
 * Java Image IO + TwelveMonkeys
 ** Image Import Libraries

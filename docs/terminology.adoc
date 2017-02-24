@@ -1,0 +1,14 @@
+= Terminology
+
+Monument::
+The imaging system as described in all this documentation.
+
+Pyx::
+A collection of relics. In essence, this is similar to other imaging systems
+document. It can contain individual pieces of meta-data and an image as a
+collection that can be stored, queried and retrieved.
+
+Relic::
+A single piece of data within a Pyx. Each relic contains a key and may contain
+a value associated with the key. Each relic may have special permissions
+associated with its use.
