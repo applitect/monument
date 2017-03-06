@@ -60,6 +60,13 @@ Each pyx can define the relic fields that can exist and are required to
 define itself. Monument allows for validation to be defined on each relic
 value provided.
 
+== The Nonclassified Pyx
+Preconfigured by the system upon installation is a special classification with
+the name "nonclassified". This Pyx allows for users with appropriate permissions
+to bulk upload documents and then do the classification within Monument itself.
+In many imaging systems, this would be considered indexing (adding the index
+information).
+
 
 == Example Pyx Defined
 *Version 2*
