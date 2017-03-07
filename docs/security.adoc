@@ -1,32 +1,71 @@
 = Security
-There are multiple layers of security within Monument. System level security, configuration security and document security.
 
-== System Level Security
-* Encryption of images
-* Security of data store
-* Web-service security
-* Auditing
-* Authentication
-* Authorization
-
-_Need to expand on system level security here_
-
-== Configuration Security
 There are many layers of security within monument. With a well defined security
 layer, monument provides reliable, audited and secured storage of documents.
 Monument provides image, data and system security that can be configured by
 users. A robust permission system provides administrators and users the ability
-to define view, insert, update and delete of images and data.
+to define view, insert, update and delete images and data.
 
-== Permissions
+== System Level Security
+
+=== Image Security
+At least half of the information being stored within Monument involves an image
+of some fashion or another. You might think that storing a JPEG is a pretty
+mundane task; however, providing security around an image can be more complicated
+than you think. Images can contain data that can override operating system code
+introducing viruses into host computers. Providing a system that can help
+mitigate issues such as these is one of the key aspects of Monument.
+
+Monument can be configured to allow or reject image types within specific
+formats. This helps provide a consistent system expected by a user. Since
+different users may expect different behavior, we allow the image types to
+be configured within a system configuration.
+
+_The image data store can be configured independently of Monument, such as
+Amazon's S3. See information about image store configuration._
+
+==== Image Types
+Monument can manipulate multiple image types. Because images are binary there is
+always a possibility of security issues with any file uploaded. Monument
+requires each image to be validated by the system where it undergoes evaluation
+to make sure it is a valid type and contains no embedded code. Monument can also
+resample and rewrite an image to eliminate security concerns. The types of
+binary data that can be stored within Monument can be configured at the system
+configuration level.
+
+===== Raster Types
+GIF, PNG, TIFF, BMP, JPG
+
+===== Non-raster Types
+SVG, PDF, DOCX, XLS
+
+=== Data Store Security
+Along with the image data, a pyx provides meta-data about the image. Sometimes,
+this data can be more important or sensitive than the image itself. This data
+is what allows for a document to be located and audited. The data is contained
+within a data store that is secured separately from the images themselves.
+
+_TODO: More info to come here when we figure out what we're doing._
+
+=== Web-service Security
+_TODO: Need this described once we decide what we're building._
+
+=== Auditing
+A relic for every pyx exists that contains all the audit information. _TODO: Expand on this_
+
+== Authentication
+Pluggable via oAuth:: _TODO: Expand on this_
+
+== Authorization
+After a user of the system is authenticated, Monument takes over determining
+the user's authorization. Monument maps a user's oAuth credentials to a set
+of groups and specified user based permissions permitting specific functionality.
+
+=== Permissions
 There are different permissions for different controls. There are controls
 for who can add and delete users and groups and assign permissions to users
-and groups.
-
-There are controls defining who can setup definitions within the system.
-
-Every pyx and relic have defined permissions, these permissions can be
-inherited from their definitions.
+and groups. There are controls defining who can setup definitions within the
+system and every pyx and relic have defined permissions.
 
 The specific permissions are defined below.
 
@@ -47,35 +86,28 @@ configuration controls that effect the system as a whole.
 * Add, View, Update, Delete Default Permissions on Pyx Definitions
 * Add, View, Update, Delete Default Permissions on Relics Definitions
 
-
+=== Data Permission Controls
 ==== Pyx
-* Add, View, Update, Delete, Version of an individual Pyx per group or user.
-
-==== Relic
-* Add, View, Update, Delete, Version of an individual Relic per group or user.
-
-== Image Types
-Monument can manipulate multiple image types. Because images are binary there is
-always a possibility of security issues with any file uploaded. Monument
-requires each image to be validated by the system where it undergoes evaluation
-to make sure it is a valid type and contains no embedded code. Monument can also
-resample and rewrite an image to eliminate security concerns. The types of
-binary data that can be stored within Monument can be configured at the system
-configuration level.
-
-=== Raster Types
-GIF, PNG, TIFF, BMP, JPG
-
-=== Non-raster Types
-SVG, PDF, DOCX, XLS
-
-
-== Pyx Security
 All relics within a pyx can have a varied set of permissions providing fine
 grained control of what users can do. Permissions are always additive, except
-when document fields are defined to be limited. These permissions are:
+when relics are defined to be limited.
 
-Insert:: User can create a new document, storing the file and its meta-data into the system.
-View:: User can search document meta-data, comments and retrieve the document.
-Update:: User can modify the document meta-data (if document defines that the data is modifiable)
-Delete:: User can delete the document from the system. [Should we use a "Trash"?]
+* View, Delete, Version, Add Relic of an individual Pyx per group or user.
+
+==== Relic
+* View, Update, Delete, Version of an individual Relic per group or user.
+
+=== Specific Permission Codes
+[cols="1,8"]
+|===
+| r | Read
+| u | Update
+| d | Delete
+| a | Add
+| s | Version
+|===
+
+==== Definition Controls
+Defaults for each pyx and relic definition can be defined. If a default is
+defined, it will be used for all access unless otherwise overridden at the
+individual pyx level.

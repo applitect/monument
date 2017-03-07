@@ -1,0 +1,25 @@
+{
+  "relics": [
+    {"name" : "filename", "value" : "happy.tiff", "permissions" : {"groups": [{"name": "staff1", "permission": "rsu"}]} },
+    {"name" : "filetype", "value" : "TIFF", "readonly": true},
+    {"name" : "classification", "value" : "Correspondence"},
+    {"name" : "uik", "value" : "123", "readonly" : true},
+    {"name" : "importDate", "value" : "2017-03-23 12:01:03", "readonly" : true},
+    {"name" : "location", "value" : "403df3f0-6efa-4583-9549-e553033aae96", "readonly" : true},
+    {"name" : "customer name", "value" : "David", "permissions": {"groups": [{"name": "staff1", "permission": "rsu"}]}},
+    {"name" : "binary", "value" : "dkfjdkjmemeifgmibmIJNEIMD.....", "permissions": {"users" : [{"name": "admin", "permission" : "rdsu"}]}},
+    {"name" : "comment", "value" : "Letter concerning child.", "permissions" : {
+      "users" : [ {"name" : "sally", "permission": "arud"} ]
+      }
+    }
+  ],
+  "permissions": {
+    "groups" : [
+      {"name": "staff1", "permission": "rau"},
+      {"name": "staff2", "permission": "r"}
+    ],
+    "users" : [
+      {"name": "david", "permission": "rsau"}
+    ]
+  }
+}

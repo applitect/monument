@@ -1,0 +1,8 @@
+UETA - Uniform Electronic Transaction Act
+UCC - Uniform Commercial Code
+MISMO - Mortgage Industry Standards Maintenance Organization
+SPERS - Standards and Procedures for Electronic Records and Signatures manual
+HIPAA - Health Insurance Portability and Accountability Act
+GLBA - Gramm Leach Bliley Act
+TOLEC - Transfer of Location of Electronic Contracts (UCC Article 9, Sect 105)
+ESIGN - Federal Electronic Signatures in Global and National Commerce Act
