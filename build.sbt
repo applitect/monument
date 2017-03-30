@@ -3,7 +3,7 @@ name := "monument"
 version := "0.0.1"
 
 libraryDependencies ++= Seq(
-    "com.yammer.dropwizard" % "dropwizard-core" % "0.9.2"
+    "io.dropwizard" % "dropwizard-core" % "1.1.0"
 )
 
 autoScalaLibrary := false
