@@ -1,0 +1,8 @@
+dist/*
+target/
+project/target/
+
+/.classpath
+/.project
+/.settings
+
