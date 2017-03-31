@@ -1,14 +1,14 @@
 {
   "relics": [
-    {"name" : "filename", "value" : "happy.tiff", "permissions" : {"groups": [{"name": "staff1", "permission": "rsu"}]} },
-    {"name" : "filetype", "value" : "TIFF", "readonly": true},
-    {"name" : "classification", "value" : "Correspondence"},
-    {"name" : "uik", "value" : "123", "readonly" : true},
-    {"name" : "importDate", "value" : "2017-03-23 12:01:03", "readonly" : true},
-    {"name" : "location", "value" : "403df3f0-6efa-4583-9549-e553033aae96", "readonly" : true},
-    {"name" : "customer name", "value" : "David", "permissions": {"groups": [{"name": "staff1", "permission": "rsu"}]}},
-    {"name" : "binary", "value" : "dkfjdkjmemeifgmibmIJNEIMD.....", "permissions": {"users" : [{"name": "admin", "permission" : "rdsu"}]}},
-    {"name" : "comment", "value" : "Letter concerning child.", "permissions" : {
+    {"name" : "filename", "value" : "happy.tiff", "createdDate": "2017-03-23 12:01:03", "permissions" : {"groups": [{"name": "staff1", "permission": "rsu"}]} },
+    {"name" : "filetype", "value" : "TIFF", "readonly": true, "createdDate": "2017-03-23 12:01:03"},
+    {"name" : "classification", "value" : "Correspondence", "createdDate": "2017-03-23 12:01:03"},
+    {"name" : "uik", "value" : "123", "createdDate": "2017-03-23 12:01:03", "readonly" : true},
+    {"name" : "importDate", "value" : "2017-03-23 12:01:03", "createdDate": "2017-03-23 12:01:03", "readonly" : true},
+    {"name" : "location", "value" : "403df3f0-6efa-4583-9549-e553033aae96", "createdDate": "2017-03-23 12:01:03", "readonly" : true},
+    {"name" : "customer name", "value" : "David", "createdDate": "2017-03-23 12:01:03", "permissions": {"groups": [{"name": "staff1", "permission": "rsu"}]}},
+    {"name" : "binary", "value" : "dkfjdkjmemeifgmibmIJNEIMD.....", "createdDate": "2017-03-23 12:01:03", "permissions": {"users" : [{"name": "admin", "permission" : "rdsu"}]}},
+    {"name" : "comment", "value" : "Letter concerning child.", "createdDate": "2017-03-25 10:03:01", "permissions" : {
       "users" : [ {"name" : "sally", "permission": "arud"} ]
       }
     }

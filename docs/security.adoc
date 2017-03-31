@@ -98,6 +98,14 @@ when relics are defined to be limited.
 * View, Update, Delete, Version of an individual Relic per group or user.
 
 === Specific Permission Codes
+Similar to other permission systems, we use a single character letter to
+refer to a permission. The letter translates to a permission that is sensitive
+to the context for which it is found. For example if someone has an "r" within
+a relic, they have permission to read the data within that relic. Another
+example is if a user has the "a" permission within the user/group settings, they
+can add users or groups. The following table describes the different permission
+characters.
+
 [cols="1,8"]
 |===
 | r | Read
