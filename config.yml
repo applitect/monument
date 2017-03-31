@@ -1,6 +1,8 @@
 server:
   rootPath: /api/*
 dateFormat: yyyy-MM-dd'T'HH:mmZ
+swagger:
+  resourcePackage: monument.resource.v1
 logging:
   level: INFO
   loggers:
