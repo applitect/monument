@@ -12,14 +12,14 @@ import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import monument.api.Pyx;
 
-@Api("v1/pyx")
-@Path("v1/pyx")
+@Api("pyxes")
+@Path("v1/pyxes")
 @Produces(MediaType.APPLICATION_JSON)
 public class PyxResource {
 
-	@ApiOperation(value = "retrieve a pyx")
+	@ApiOperation(value = "retrieve a pyx by unique id")
 	@GET
-	public Pyx getPyx(@QueryParam("uid") Optional<String> uid) {
+	public Pyx getPyxes(@QueryParam("uid") Optional<String> uid) {
 		return new Pyx();
 	}
 }
